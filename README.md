@@ -124,6 +124,15 @@ Utilized several React hooks for efficient state management and dynamic behavior
 <img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/home.png' />
 <img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/home%202.png' />
 
+
+
+# login
+<img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/signup.png' />
+
+# login
+<img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/login.png' />
+
+
 # About Page
 <img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/about.png' />
 
@@ -145,3 +154,8 @@ Utilized several React hooks for efficient state management and dynamic behavior
 
 # Cart1
 <img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/cart.png' />
+
+
+# buy course
+<img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/paymet.png' />
+<img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/successs.png' />
