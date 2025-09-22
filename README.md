@@ -166,3 +166,7 @@ Utilized several React hooks for efficient state management and dynamic behavior
 # Instructor Dashboard
 <img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/instuctor%20dashboard.png' />
 
+
+# Course
+<img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/course.png' />
+
