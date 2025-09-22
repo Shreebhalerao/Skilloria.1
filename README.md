@@ -126,7 +126,7 @@ Utilized several React hooks for efficient state management and dynamic behavior
 
 
 
-# login
+# Signup
 <img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/signup.png' />
 
 # login
@@ -159,3 +159,10 @@ Utilized several React hooks for efficient state management and dynamic behavior
 # buy course
 <img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/paymet.png' />
 <img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/successs.png' />
+
+# Enrolled course
+<img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/enroll%20courses.png' />
+
+# Instructor Dashboard
+<img width='100%' src='https://github.com/Shreebhalerao/Skilloria.1/blob/main/sc/instuctor%20dashboard.png' />
+
