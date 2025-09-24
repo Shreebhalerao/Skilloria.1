@@ -42,7 +42,7 @@ export default function App() {
          <Route path="/about" element={<About />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/verify-email" element={<VerifyEmail />} />
+        <Route path="/VerifyEmail" element={<VerifyEmail />} />
 
         <Route path="/catalog/:CatalogName" element={<Catalog />} />
         <Route path="/courses/:courseId" element={<CourseDetails />} />
