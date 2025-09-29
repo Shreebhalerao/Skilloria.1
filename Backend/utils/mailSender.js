@@ -1,28 +1,32 @@
-const nodemailer = require("nodemailer");
+const fetch = require("node-fetch"); // make sure node-fetch is installed: npm i node-fetch
 
 const mailSender = async (email, title, body) => {
     try {
-        let transporter = nodemailer.createTransport({
-            host: process.env.MAIL_HOST,   // Brevo SMTP host
-            port: 587,                     // TLS port
-            secure: false,                 // false for TLS
-            auth: {
-                user: process.env.MAIL_USER,  // Brevo login / verified sender
-                pass: process.env.MAIL_PASS,  // Brevo SMTP key
+        const res = await fetch("https://api.brevo.com/v3/smtp/email", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "api-key": process.env.BREVO_API_KEY, // your Brevo API key
             },
+            body: JSON.stringify({
+                sender: {
+                    name: "Shree || Shreeraj Dev",
+                    email: process.env.MAIL_USER // your verified sender email
+                },
+                to: [
+                    { email: email }
+                ],
+                subject: title,
+                htmlContent: `<p>Your OTP is: <b>${body}</b></p>`
+            }),
         });
 
-        let info = await transporter.sendMail({
-            from: `"Shree || Shreeraj Dev" <${process.env.MAIL_USER}>`, 
-            to: email,
-            subject: String(title),
-            html: `<p>Your OTP is: <b>${String(body)}</b></p>`, // OTP message
-        });
+        const data = await res.json();
+        console.log("✅ Email sent via Brevo API:", data);
+        return data;
 
-        console.log("✅ Email sent:", info.messageId);
-        return info;
     } catch (err) {
-        console.error("❌ Email sending failed:", err.message);
+        console.error("❌ Email sending failed via Brevo API:", err.message);
     }
 };
 
