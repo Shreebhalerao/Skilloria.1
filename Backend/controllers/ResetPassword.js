@@ -27,7 +27,7 @@ exports.resetPasswordToken = async (req, res) => {
     console.log("Saved user:", user);
 
     // Send mail with reset link
-    const url = `https://skilloria-1.vercel.app/update-password/${token}`;
+    const url = `http://localhost:2000/api/update-password/${token}`;
     await mailSender(
       email,
       "Password Reset Link",
