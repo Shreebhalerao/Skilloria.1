@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const mailSender = async (email, title, body) => {
     try {
@@ -10,7 +10,7 @@ const mailSender = async (email, title, body) => {
             },
             body: JSON.stringify({
                 sender: {
-                    name: "Skilloria",        // Display name
+                    name: "Skilloria",
                     email: process.env.MAIL_USER
                 },
                 to: [{ email }],
