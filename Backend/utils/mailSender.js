@@ -1,4 +1,4 @@
-const fetch = require("node-fetch"); // make sure node-fetch is installed: npm i node-fetch
+const fetch = require("node-fetch");
 
 const mailSender = async (email, title, body) => {
     try {
@@ -6,16 +6,14 @@ const mailSender = async (email, title, body) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "api-key": process.env.BREVO_API_KEY, // your Brevo API key
+                "api-key": process.env.BREVO_API_KEY,
             },
             body: JSON.stringify({
                 sender: {
-                    name: "Shree || Shreeraj Dev",
-                    email: process.env.MAIL_USER // your verified sender email
+                    name: "Skilloria",        // Display name
+                    email: process.env.MAIL_USER
                 },
-                to: [
-                    { email: email }
-                ],
+                to: [{ email }],
                 subject: title,
                 htmlContent: `<p>Your OTP is: <b>${body}</b></p>`
             }),
