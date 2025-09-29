@@ -21,8 +21,8 @@ app.use(cookieParser());
 //connce to the frontend request
 app.use(
     cors({
-        // origin: "https://skilloria-1.vercel.app", 
-        origin : "http://localhost:5173",
+         origin: "https://skilloria-1.vercel.app", 
+       // origin : "http://localhost:5173",
         credentials:true,
     })
 )
