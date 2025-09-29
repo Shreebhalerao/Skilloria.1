@@ -12,7 +12,7 @@ router.post("/login",login);
 //for signup
 router.post("/signUP",signUP);
 //for sending the otp
-router.post("/sendOTP",sendOTP);
+router.post("/sendotp",sendOTP);
 //for changing the pass
 router.post("/changePassword",auth,changePassword);
 
