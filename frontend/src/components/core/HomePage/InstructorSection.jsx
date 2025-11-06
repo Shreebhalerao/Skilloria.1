@@ -6,31 +6,50 @@ import { FaArrowRight } from "react-icons/fa";
 
 const InstructorSection =()=>{
     return(
-        <div className="mt-16">
-             <div className="flex flex-row gap-20 items-center">
-                <div className="w-[50%]">
-                    <img src={Instuctor} alt=""
-                    className="shadow-white"
-                     />
+        // Added padding for mobile screen edges and adjusted vertical margins
+        <div className="mt-12 mb-20 lg:mt-16 p-4">
+            {/* Default to flex-col on mobile, switch to flex-row on large screens. Adjusted gap for mobile. */}
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center justify-center">
+                
+                {/* Image Container (Left/Top) */}
+                {/* w-full on mobile, w-[50%] on desktop */}
+                <div className="w-full lg:w-[50%]">
+                    {/* Image is now full width and maintains aspect ratio, added a subtle visual shadow/effect */}
+                    <img 
+                        src={Instuctor} 
+                        alt="Instructor"
+                        className="w-full h-auto object-cover rounded-xl shadow-2xl shadow-blue-500/50" 
+                    />
                 </div>
 
-                <div className="w-[50%] flex-col gap-10">
-                    <div className="text-4xl font-semibold w-[50%]">
+                {/* Text Content Container (Right/Bottom) */}
+                {/* w-full on mobile, w-[50%] on desktop. Adjusted flex-col structure */}
+                <div className="w-full lg:w-[50%] flex flex-col gap-5 lg:gap-10">
+                    
+                    {/* Heading */}
+                    {/* Heading width made w-full on mobile for better flow */}
+                    <div className="text-4xl font-semibold w-full lg:w-[50%]">
                         Become an
                         <HighlightText text={"Instructor"}/>
                     </div>
-                    <p className="font-medium mt-8 text-[16px] w-[70%] text-richblack-300">Instructor from around the world teach millions of student on  Skilloria. we provide the toold and skills to teach what you love</p>
                     
-                        <div className="w-fit mt-8">
-                            <CTAButton active={true} linkto={"/signup"}>
-                                <div className="flex flex-row gap-2 items-center">
-                                    Start learning Today
-                                    <FaArrowRight/>
-                                </div>
-                            </CTAButton>
-                        </div>
+                    {/* Description */}
+                    {/* w-full on mobile, w-[70%] on desktop */}
+                    <p className="font-medium mt-4 text-[16px] w-full lg:w-[70%] text-richblack-300">
+                        Instructors from around the world teach millions of students on Skilloria. We provide the tools and skills to teach what you love.
+                    </p>
+                    
+                    {/* CTA Button */}
+                    <div className="w-fit mt-8">
+                        <CTAButton active={true} linkto={"/signup"}>
+                            <div className="flex flex-row gap-2 items-center">
+                                Start Teaching Today
+                                <FaArrowRight/>
+                            </div>
+                        </CTAButton>
+                    </div>
                 </div>
-             </div>
+            </div>
         </div>
     )
 }
